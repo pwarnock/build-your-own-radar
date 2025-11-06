@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build:prod
+        run: ASSET_PATH=/build-your-own-radar/ npm run build:prod
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
