@@ -18,8 +18,9 @@ const mount = (containerId, props = {}) => {
       </div>
     </header>
     <div class="hero-banner">
-      <div class="hero-banner__wrapper">
-        <h1 class="hero-banner__title-text">Build your own Radar</h1>
+    <div class="hero-banner__wrapper">
+    <h1 class="hero-banner__title-text">Build your own Radar</h1>
+      <p class="hero-banner__subtitle-text">Radar</p>
       </div>
     </div>
     <main>

@@ -59,23 +59,23 @@ header {
   }
 }
 
-.quadrant-btn--group,
-.multiple-sheet-button-group {
+.radar-component .quadrant-btn--group,
+.radar-component .multiple-sheet-button-group {
   text-align: left;
   padding-left: 10%;
 }
 
-.print-radar-btn,
-.search-box {
+.radar-component .print-radar-btn,
+.radar-component .search-box {
   margin-left: auto;
   margin-right: 10%;
 }
 
-.buttons-group {
+.radar-component .buttons-group {
   padding: 15px 0 25px;
 }
 
-.home-link {
+.radar-component .home-link {
   color: $pink;
   margin-bottom: 10px;
   line-height: normal;
@@ -86,7 +86,7 @@ header {
   width: 80%;
 }
 
-.button {
+.radar-component .button {
   font-size: $baseFont;
   text-transform: capitalize;
   margin-right: 20px;

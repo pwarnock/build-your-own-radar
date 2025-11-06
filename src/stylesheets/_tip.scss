@@ -1,4 +1,4 @@
-.d3-tip {
+.radar-component .d3-tip {
   white-space: nowrap;
   line-height: 1;
   font-size: 12px;
@@ -13,12 +13,12 @@
 }
 
 @media screen and (min-width: 800px) {
-  .d3-tip {
+  .radar-component .d3-tip {
     display: block;
   }
 }
 
-.d3-tip:after {
+.radar-component .d3-tip:after {
   box-sizing: border-box;
   display: none;
   font-size: 10px;
@@ -30,15 +30,15 @@
 }
 
 @media screen and (min-width: 800px) {
-  .d3-tip:after {
+  .radar-component .d3-tip:after {
     display: inline;
   }
 }
 
-.d3-tip.n {
+.radar-component .d3-tip.n {
   margin: -10px 0 0;
 }
-.d3-tip.n:after {
+.radar-component .d3-tip.n:after {
   content: '\25BC';
   margin: -3px 0 0;
   top: 100%;
@@ -46,20 +46,20 @@
   text-align: center;
 }
 
-.d3-tip.ne {
+.radar-component .d3-tip.ne {
   margin: -10px 0 0 -45px;
 }
-.d3-tip.ne:after {
+.radar-component .d3-tip.ne:after {
   content: '\25BC';
   bottom: -8px;
   left: 18px;
   text-align: left;
 }
 
-.d3-tip.nw {
+.radar-component .d3-tip.nw {
   margin: -10px 0 0 45px;
 }
-.d3-tip.nw:after {
+.radar-component .d3-tip.nw:after {
   content: '\25BC';
   bottom: -8px;
   right: 18px;

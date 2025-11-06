@@ -1,37 +1,37 @@
 @charset "UTF-8";
 
 @media screen {
-.tooltipster-default .tooltipster-content {
+.radar-component .tooltipster-default .tooltipster-content {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   padding: 8px 10px;
   overflow: hidden;
 }
-.tooltipster-fall,
-.tooltipster-grow.tooltipster-show {
+.radar-component .tooltipster-fall,
+.radar-component .tooltipster-grow.tooltipster-show {
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
   -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
   -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
 }
-.tooltipster-base {
+.radar-component .tooltipster-base {
   display: -webkit-box;
   display: flex;
   pointer-events: none;
   position: absolute;
 }
-.tooltipster-box {
+.radar-component .tooltipster-box {
   -webkit-box-flex: 1;
   flex: 1 1 auto;
 }
-.tooltipster-content {
+.radar-component .tooltipster-content {
   box-sizing: border-box;
   max-height: 100%;
   max-width: 100%;
   overflow: auto;
 }
-.tooltipster-ruler {
+.radar-component .tooltipster-ruler {
   bottom: 0;
   left: 0;
   overflow: hidden;
@@ -40,15 +40,15 @@
   top: 0;
   visibility: hidden;
 }
-.tooltipster-fade {
+.radar-component .tooltipster-fade {
   opacity: 0;
   -webkit-transition-property: opacity;
   transition-property: opacity;
 }
-.tooltipster-fade.tooltipster-show {
+.radar-component .tooltipster-fade.tooltipster-show {
   opacity: 1;
 }
-.tooltipster-grow {
+.radar-component .tooltipster-grow {
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
   -webkit-transition-property: -webkit-transform;
@@ -57,7 +57,7 @@
   transition-property: transform, -webkit-transform;
   -webkit-backface-visibility: hidden;
 }
-.tooltipster-grow.tooltipster-show {
+.radar-component .tooltipster-grow.tooltipster-show {
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);

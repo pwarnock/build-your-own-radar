@@ -2,7 +2,7 @@
 @import 'colors';
 @import 'fonts';
 
-.helper-description {
+.radar-component .helper-description {
   @include eight-column-layout-margin;
   padding-top: 32px;
   margin-top: 24px;
@@ -24,7 +24,7 @@
   }
 }
 
-.input-sheet-form {
+.radar-component .input-sheet-form {
   @include eight-column-layout-margin;
   display: flex;
   flex-direction: column;

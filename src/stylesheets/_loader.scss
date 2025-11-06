@@ -1,5 +1,5 @@
 @import 'colors';
-.loading-spinner {
+.radar-component .loading-spinner {
   &-blocks {
     width: 100%;
     height: 100%;
@@ -15,7 +15,7 @@
   }
 }
 
-.loader-wrapper {
+.radar-component .loader-wrapper {
   max-width: 60px;
   height: 60px;
   display: flex;
