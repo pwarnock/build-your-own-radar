@@ -6,6 +6,9 @@ const mount = (containerId, props = {}) => {
 
   if (!props.documentId) throw new Error('documentId is required')
 
+  // Add scoping class
+  container.classList.add('radar-component')
+
   // Append the necessary HTML structure for the radar
   container.innerHTML = `
     <header class="input-sheet__logo">

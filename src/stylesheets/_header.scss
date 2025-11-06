@@ -5,8 +5,8 @@ header {
   text-align: center;
 }
 
-.radar-title,
-.buttons-group,
+.radar-component .radar-title,
+.radar-component .buttons-group,
 #alternative-buttons {
   display: flex;
   flex-direction: row;
@@ -15,7 +15,7 @@ header {
   align-content: space-between;
 }
 
-.radar-title {
+.radar-component .radar-title {
   background-color: $grey-light;
   padding: 30px 0;
 

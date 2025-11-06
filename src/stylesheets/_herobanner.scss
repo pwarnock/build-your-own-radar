@@ -2,7 +2,7 @@
 @import 'layout';
 
 @if $UIRefresh2022 {
-  .hero-banner {
+  .radar-component .hero-banner {
     height: $tabletBannerHeight;
     background-color: $amethyst;
     background-image: url('images/banner-image-mobile.jpg');
