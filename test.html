@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar Microfrontend Test</title>
+</head>
+<body>
+  <h1>Radar Microfrontend Test</h1>
+  <div id="radar-container"></div>
+
+  <script>
+    // Load the remote entry
+    const script = document.createElement('script');
+    script.src = './dist/remote-entry.js';
+    script.onload = () => {
+      // Now load the Radar module
+      window.radarRemote.get('./Radar').then((module) => {
+        module().then((radarModule) => {
+          radarModule.mount('radar-container', {
+            documentId: 'https://raw.githubusercontent.com/thoughtworks/build-your-own-radar/master/spec/end_to_end_tests/resources/data.json'
+          });
+        });
+      });
+    };
+    document.head.appendChild(script);
+  </script>
+</body>
+</html>

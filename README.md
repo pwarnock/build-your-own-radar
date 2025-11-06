@@ -130,6 +130,40 @@ For a self hosted BYOR app, there is no such condition on the names. Instruction
 
 Check [this page](https://www.thoughtworks.com/radar/byor) for step by step guidance.
 
+### Using as Microfrontend
+
+This application can be consumed as a microfrontend module using Webpack Module Federation.
+
+#### Setup in Host Application
+
+In your host application's webpack config, add the remote:
+
+```javascript
+new ModuleFederationPlugin({
+  name: 'host',
+  remotes: {
+    radarRemote: 'radarRemote@https://your-github-username.github.io/build-your-own-radar/remote-entry.js',
+  },
+  shared: ['d3', 'lodash', 'jquery', 'sanitize-html'],
+})
+```
+
+#### Mounting the Radar
+
+In your host application:
+
+```javascript
+import('radarRemote/Radar').then((module) => {
+  module.mount('radar-container', { documentId: 'https://example.com/data.json' });
+});
+```
+
+The `mount` function takes:
+- `containerId`: The ID of the DOM element to mount the radar into
+- `props`: An object with optional `documentId` (URL to Google Sheet, CSV, or JSON data)
+
+If `documentId` is not provided, it defaults to `/tools/index.json` relative to the consuming site's origin.
+
 ### More complex usage
 
 To create the data representation, you can use the Google Sheet [factory](/src/util/factory.js) methods or CSV/JSON, or you can also insert all your data straight into the code.

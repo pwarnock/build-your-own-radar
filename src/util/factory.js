@@ -299,9 +299,10 @@ const FileName = function (url) {
   return url
 }
 
-const Factory = function () {
+const Factory = function (options = {}) {
   var self = {}
   var sheet
+  var rootElement = options.container || document.body
 
   self.build = function () {
     if (!isValidConfig()) {
@@ -326,7 +327,7 @@ const Factory = function () {
 
     const domainName = DomainName(window.location.search.substring(1))
 
-    const paramId = getDocumentOrSheetId()
+    const paramId = options.documentId || getDocumentOrSheetId()
     if (paramId && paramId.endsWith('.csv')) {
       sheet = CSVDocument(paramId)
       sheet.init().build()
@@ -339,9 +340,9 @@ const Factory = function () {
       sheet.init().build()
     } else {
       if (!featureToggles.UIRefresh2022) {
-        document.body.style.opacity = '1'
-        document.body.innerHTML = ''
-        const content = d3.select('body').append('div').attr('class', 'input-sheet')
+        rootElement.style.opacity = '1'
+        rootElement.innerHTML = ''
+        const content = d3.select(rootElement).append('div').attr('class', 'input-sheet')
         plotLogo(content)
         const bannerText =
           '<div><h1>Build your own radar</h1><p>Once you\'ve <a href ="https://www.thoughtworks.com/radar/byor">created your Radar</a>, you can use this service' +
@@ -367,9 +368,9 @@ function setDocumentTitle() {
 
 function plotLoading(content) {
   if (!featureToggles.UIRefresh2022) {
-    document.body.style.opacity = '1'
-    document.body.innerHTML = ''
-    content = d3.select('body').append('div').attr('class', 'loading').append('div').attr('class', 'input-sheet')
+    rootElement.style.opacity = '1'
+    rootElement.innerHTML = ''
+    content = d3.select(rootElement).append('div').attr('class', 'loading').append('div').attr('class', 'input-sheet')
 
     setDocumentTitle()
 
@@ -439,7 +440,7 @@ function plotErrorMessage(exception, fileType) {
   if (featureToggles.UIRefresh2022) {
     showErrorMessage(exception, fileType)
   } else {
-    const content = d3.select('body').append('div').attr('class', 'input-sheet')
+    const content = d3.select(rootElement).append('div').attr('class', 'input-sheet')
     setDocumentTitle()
 
     plotLogo(content)
@@ -507,7 +508,7 @@ function plotUnauthorizedErrorMessage() {
   let content
   const helperDescription = d3.select('.helper-description')
   if (!featureToggles.UIRefresh2022) {
-    content = d3.select('body').append('div').attr('class', 'input-sheet')
+    content = d3.select(rootElement).append('div').attr('class', 'input-sheet')
     setDocumentTitle()
 
     plotLogo(content)

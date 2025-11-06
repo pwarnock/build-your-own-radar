@@ -1,6 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
+const { ModuleFederationPlugin } = require('webpack').container
 const path = require('path')
 const buildPath = path.resolve(__dirname, 'dist')
 const args = require('yargs').argv
@@ -33,6 +34,14 @@ const plugins = [
     'process.env.RINGS': JSON.stringify(process.env.RINGS),
     'process.env.QUADRANTS': JSON.stringify(process.env.QUADRANTS),
     'process.env.ADOBE_LAUNCH_SCRIPT_URL': JSON.stringify(process.env.ADOBE_LAUNCH_SCRIPT_URL),
+  }),
+  new ModuleFederationPlugin({
+    name: 'radarRemote',
+    filename: 'remote-entry.js',
+    exposes: {
+      './Radar': './src/radar.js',
+    },
+    shared: ['d3', 'lodash', 'jquery', 'sanitize-html'],
   }),
 ]
 
