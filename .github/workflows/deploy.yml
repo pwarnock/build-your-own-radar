@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: ASSET_PATH=/build-your-own-radar/ REMOTE_PUBLIC_PATH=https://pwarnock.github.io/build-your-own-radar/ npm run build:prod
+        run: ASSET_PATH=/build-your-own-radar/ REMOTE_PUBLIC_PATH=https://peterwarnock.com/build-your-own-radar/ npm run build:prod
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
