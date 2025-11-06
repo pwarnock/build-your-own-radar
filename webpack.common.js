@@ -18,6 +18,7 @@ if (env) {
 const common = ['./src/common.js']
 
 const ASSET_PATH = process.env.ASSET_PATH || '/'
+const REMOTE_PUBLIC_PATH = process.env.REMOTE_PUBLIC_PATH || ASSET_PATH
 
 const plugins = [
   new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
@@ -51,7 +52,7 @@ module.exports = {
   },
   output: {
     path: buildPath,
-    publicPath: ASSET_PATH,
+    publicPath: REMOTE_PUBLIC_PATH,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'images/[name][ext]',
   },
