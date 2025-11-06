@@ -35,6 +35,7 @@ const plugins = [
     'process.env.RINGS': JSON.stringify(process.env.RINGS),
     'process.env.QUADRANTS': JSON.stringify(process.env.QUADRANTS),
     'process.env.ADOBE_LAUNCH_SCRIPT_URL': JSON.stringify(process.env.ADOBE_LAUNCH_SCRIPT_URL),
+    'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL || REMOTE_PUBLIC_PATH.replace(/\/$/, '')),
   }),
   new ModuleFederationPlugin({
     name: 'radarRemote',
