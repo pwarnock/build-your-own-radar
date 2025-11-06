@@ -11,7 +11,7 @@ const mount = (containerId, props = {}) => {
     <header class="input-sheet__logo">
       <div>
         <span>Powered by</span>
-        <a href="https://www.thoughtworks.com"><img src="/images/tw-logo.png" alt="Thoughtworks logo" /></a>
+        <a href="https://www.thoughtworks.com"><img src="/build-your-own-radar/images/tw-logo.png" alt="Thoughtworks logo" /></a>
       </div>
     </header>
     <div class="hero-banner">
@@ -21,12 +21,12 @@ const mount = (containerId, props = {}) => {
     </div>
     <main>
       <div id="pdf-cover-page">
-        <img class="pdf-banner-image" src="/images/pdf_banner.png" alt="Pdf cover image" width="100%" height="300px" />
+        <img class="pdf-banner-image" src="/build-your-own-radar/images/pdf_banner.png" alt="Pdf cover image" width="100%" height="300px" />
         <h1 class="pdf-title"></h1>
         <div class="pdf-powered-by-text">
           <span>Powered by</span>
           <a href="https://www.thoughtworks.com">
-            <img class="pdf-tw-logo" src="/images/tw-logo.png" alt="logo" />
+            <img class="pdf-tw-logo" src="/build-your-own-radar/images/tw-logo.png" alt="logo" />
           </a>
         </div>
       </div>
@@ -79,7 +79,7 @@ const mount = (containerId, props = {}) => {
         <div class="pdf-powered-by-text">
           <span>Powered by</span>
           <a href="https://www.thoughtworks.com">
-            <img class="pdf-tw-logo" src="/images/tw-logo.png" alt="logo" />
+            <img class="pdf-tw-logo" src="/build-your-own-radar/images/tw-logo.png" alt="logo" />
           </a>
           <div class="pdf-footer-title">Build your own Radar</div>
           <a class="radar-link" id="generated-radar-link" href="https://radar.thoughtworks.com">
