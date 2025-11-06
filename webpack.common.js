@@ -42,7 +42,6 @@ const plugins = [
     exposes: {
       './Radar': './src/radar.js',
     },
-    shared: ['d3', 'lodash', 'jquery', 'sanitize-html'],
   }),
 ]
 
