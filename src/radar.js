@@ -109,4 +109,4 @@ const mount = (containerId, props = {}) => {
   factory.build()
 }
 
-module.exports = { mount }
+module.exports = mount
