@@ -4,8 +4,7 @@ const mount = (containerId, props = {}) => {
   const container = document.getElementById(containerId)
   if (!container) throw new Error(`Container with id ${containerId} not found`)
 
-  // Default documentId to /tools/index.json if not provided
-  props.documentId = props.documentId || '/tools/index.json'
+  if (!props.documentId) throw new Error('documentId is required')
 
   // Append the necessary HTML structure for the radar
   container.innerHTML = `

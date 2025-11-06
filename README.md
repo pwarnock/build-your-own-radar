@@ -160,9 +160,7 @@ import('radarRemote/Radar').then((module) => {
 
 The `mount` function takes:
 - `containerId`: The ID of the DOM element to mount the radar into
-- `props`: An object with optional `documentId` (URL to Google Sheet, CSV, or JSON data)
-
-If `documentId` is not provided, it defaults to `/tools/index.json` relative to the consuming site's origin.
+- `props`: An object with `documentId` (required URL to Google Sheet, CSV, or JSON data)
 
 ### More complex usage
 
