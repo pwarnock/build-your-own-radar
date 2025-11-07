@@ -36,8 +36,7 @@ module.exports = merge(common, {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
+        MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { importLoaders: 1, modules: 'global', url: false },
