@@ -6,11 +6,13 @@ const mount = (containerId, props = {}) => {
 
   if (!props.documentId) throw new Error('documentId is required')
 
-  // Add scoping class
-  container.classList.add('radar-component')
+  // Create wrapper div for scoping
+  const wrapper = document.createElement('div')
+  wrapper.className = 'radar-component'
+  container.appendChild(wrapper)
 
   // Append the necessary HTML structure for the radar
-  container.innerHTML = `
+  wrapper.innerHTML = `
     <header class="input-sheet__logo">
       <div>
         <span>Powered by</span>
@@ -108,8 +110,8 @@ const mount = (containerId, props = {}) => {
     </div>
   `
 
-  // Now call Factory with the documentId and container
-  const factory = Factory({ documentId: props.documentId, container })
+  // Now call Factory with the documentId and wrapper
+  const factory = Factory({ documentId: props.documentId, container: wrapper })
   factory.build()
 }
 
